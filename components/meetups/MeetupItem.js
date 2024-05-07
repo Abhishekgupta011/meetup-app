@@ -5,12 +5,7 @@ import { dummy_meetups } from '@/pages';
 import { useRouter } from 'next/router';
 
 function MeetupItem(props) {
-    const router = useRouter();
-    console.log(props.id);
-
-    function showDetailsHandler() {
-         router.push('/' + props.id);
-    }
+   
   return (
     <li className={classes.item}>
       <Card>
@@ -22,7 +17,7 @@ function MeetupItem(props) {
           <address>{props.address}</address>
         </div>
         <div className={classes.actions}>
-          <button onClick={showDetailsHandler}>Show Details</button>
+          <Link href={`/${props.id}`}><button>Show Details</button></Link>
         </div>
       </Card>
     </li>
