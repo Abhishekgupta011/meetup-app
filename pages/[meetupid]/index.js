@@ -2,7 +2,6 @@ import MeetupDetail from "@/components/meetups/MeetupDetail";
 import { MongoClient, ObjectId } from "mongodb";
 
 const DetailsPage = (props) =>{
-
     return (
         <div>
           <MeetupDetail
