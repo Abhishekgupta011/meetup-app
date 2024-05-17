@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 
 const { default: NewMeetupForm } = require("@/components/meetups/NewMeetupForm")
@@ -19,6 +20,10 @@ const NewMeetupPage = ()=>{
     }
     return(
         <>
+        <Head>
+            <title>NextJS Meetups</title>
+            <meta name="description" content="browse"/>
+        </Head> 
             <NewMeetupForm onAddMeetup={addMeetupHandler}/>
         </>
     )
